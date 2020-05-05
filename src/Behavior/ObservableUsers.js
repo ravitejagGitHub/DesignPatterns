@@ -14,7 +14,7 @@ class ObservableUsers {
         this.subscribers.push(subscriber);
         return  {
             unsubscribe: this._unsubscribe.bind(this, subscriber)
-        }
+        };
     }
 
     _unsubscribe(subscriber){

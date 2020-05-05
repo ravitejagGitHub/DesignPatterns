@@ -29,10 +29,9 @@ class NewCalculator {
 
 
 class UltimateCalculator {
-    oldCal = new OldCalculator();
-    newCal = new NewCalculator();
     constructor() {
-        
+        this.oldCal = new OldCalculator();
+        this.newCal = new NewCalculator();
     }
 
     add(term1, term2){
@@ -64,8 +63,7 @@ class UltimateCalculator {
 
 
 class CleverCalculator extends UltimateCalculator {
-    cache = null;
-    
+   
     constructor(){
         super();
         this.cache = new Map();       
@@ -139,26 +137,26 @@ class CleverCalculator extends UltimateCalculator {
 }
 let cc = new CleverCalculator();
 
-console.log("-------------- Add ----------------");
+console.log('-------------- Add ----------------');
 console.log(cc.add(2,3));
 console.log(cc.add(1,5));
 console.log(cc.add(2,3));
 console.log(cc.cache);
 
-console.log("-------------- Sub ----------------");
+console.log('-------------- Sub ----------------');
 console.log(cc.sub(2,3));
 console.log(cc.sub(1,5));
 console.log(cc.sub(2,3));
 console.log(cc.cache);
 
 
-console.log("-------------- Multiply ----------------");
+console.log('-------------- Multiply ----------------');
 console.log(cc.multiply(2,3));
 console.log(cc.multiply(1,5));
 console.log(cc.multiply(2,3));
 console.log(cc.cache);
 
-console.log("-------------- Devide ----------------");
+console.log('-------------- Devide ----------------');
 console.log(cc.divide(2,3));
 console.log(cc.divide(1,5));
 console.log(cc.divide(2,3));

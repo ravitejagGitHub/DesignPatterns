@@ -1,8 +1,8 @@
 
 //Facade: 	A single class that represents an entire subsystem
 // Create an UltimateCalculator, that would let you use all the operations at once with one interface, which should reuse OldCalculator and NewCalculator.
-const OldCalculator = require("./OldCalculator");
-const NewCalculator = require("./NewCalculator");
+const OldCalculator = require('./OldCalculator');
+const NewCalculator = require('./NewCalculator');
 
 class UltimateCalculator {
     

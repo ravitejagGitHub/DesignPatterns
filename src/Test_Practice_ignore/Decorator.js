@@ -28,10 +28,10 @@ class NewCalculator {
 // Create an UltimateCalculator, that would let you use all the operations at once with one interface, which should reuse OldCalculator and NewCalculator.
 
 class UltimateCalculator {
-    oldCal = new OldCalculator();
-    newCal = new NewCalculator();
+   
     constructor() {
-        
+        this.oldCal = new OldCalculator();
+        this.newCal = new NewCalculator();
     }
 
     add(term1, term2){
@@ -62,8 +62,7 @@ class UltimateCalculator {
 // C)	Create a CleverCalculator, that would let you cache results of the UltimateCalculator calculation depending on arguments and type of operation.
 
 class CleverCalculator extends UltimateCalculator {
-    cache = null;
-    
+   
     constructor(){
         super();
         this.cache = new Map();       
@@ -171,22 +170,22 @@ class MonitorCleverCalculator extends CleverCalculator {
       
     add(term1, term2){
         const result = super.add(term1, term2);
-        Logger.log('Add', term1,term2, result)
+        Logger.log('Add', term1,term2, result);
         return result;
     }
     sub(term1, term2){
         const result = super.sub(term1, term2);
-        Logger.log('Sub', term1,term2, result)
+        Logger.log('Sub', term1,term2, result);
         return result;
     }
     multiply(term1, term2) {
         const result = super.multiply(term1, term2);
-        Logger.log('Multiply', term1,term2, result)
+        Logger.log('Multiply', term1,term2, result);
         return result;
     }
     divide(term1, term2) {
         const result = super.divide(term1, term2);
-        Logger.log('Divide', term1,term2, result)
+        Logger.log('Divide', term1,term2, result);
         return result;
     }
 }

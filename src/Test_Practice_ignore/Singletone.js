@@ -1,10 +1,10 @@
 class Robot {
-    val = 1;
+
     constructor(){
         if(typeof Robot.instanc === 'object') {
             return Robot.instanc;
         }
-
+        val = 1;
         Robot.instanc = this;
         return this;
     }

@@ -29,10 +29,10 @@ class NewCalculator {
 
 
 class UltimateCalculator {
-    oldCal = new OldCalculator();
-    newCal = new NewCalculator();
+   
     constructor() {
-        
+        this.oldCal = new OldCalculator();
+        this.newCal = new NewCalculator();
     }
 
     add(term1, term2){

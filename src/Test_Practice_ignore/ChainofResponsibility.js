@@ -1,7 +1,6 @@
 // Chain of responsibility : 
 
 class CumulativeSum {
-    sum;
     constructor(){
         this.sum = 0;
     }
@@ -12,5 +11,5 @@ class CumulativeSum {
     }
 }
 
-const sum1 = new CumulativeSum()
+const sum1 = new CumulativeSum();
 console.log(sum1.add(10).add(2).add(50).sum);

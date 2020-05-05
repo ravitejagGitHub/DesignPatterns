@@ -4,7 +4,9 @@ class SpecialMath {
     }
 
     square() {
+        /* eslint-disable */
         return this._num ** 2;
+        /* eslint-enable */
     }
 
     cube() {
