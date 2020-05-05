@@ -3,9 +3,8 @@
 
 // C)	You have a list of users. Add functionality to subscribe to the changes on it (e.g. after calling push, pop). 
 
-class Users {
-    users;
-    subscribers;
+class ObservableUsers {
+
     constructor(users) {
         this.users = users || [];
         this.subscribers = [];
@@ -34,14 +33,14 @@ class Users {
         return user;
     }
 
-    notifySubscriber(data) {
+    notifySubscriber() {
         this.subscribers.forEach(subscribe => {
             subscribe.call(null, this.users);
         });       
     }
 }
 
-const users= new Users(['Ravi','Teja']);
+const users= new ObservableUsers(['Ravi','Teja']);
 const sub1 = users.subscribe((users)=>{
     console.log('subsriber 1 : ', users);
 });
